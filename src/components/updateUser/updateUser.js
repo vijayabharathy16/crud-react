@@ -14,7 +14,7 @@ const UpdateUser = () => {
   useEffect(() => {
     const fetchUser = async () => {
         try {
-           const response = await fetch(`http://localhost:5000/api/user/${id}`);
+           const response = await fetch(`https://crud-node-2.onrender.com/api/user/${id}`);
            const data = await response.json();
            console.log(data);
            setFormData(data);
@@ -36,7 +36,7 @@ const UpdateUser = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
        try {
-        const response = await fetch(`http://localhost:5000/api/user/${id}`,{
+        const response = await fetch(`https://crud-node-2.onrender.com/api/user/${id}`,{
             method: "PUT",
             headers:{
                 "Content-Type":"application/json",
