@@ -55,3 +55,9 @@
     border-radius: 5px; */
    
 }
+
+.back-img{
+    background-image: url('https://media.istockphoto.com/id/1078513168/vector/frost-patterns-on-frozen-window-as-a-symbol-of-christmas-wonder-christmas-or-new-year.jpg?s=612x612&w=0&k=20&c=iFIacgLHt1JQD1y6bicYCVAExO1Oe1rFzacQPT8hYhk=');
+    background-size: cover;
+    background-repeat: no-repeat;
+}

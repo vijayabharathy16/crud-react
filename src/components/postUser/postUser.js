@@ -1,43 +1,12 @@
 import { Form, Button } from "react-bootstrap";
 import React, { useState } from "react";
-// import { useFormik } from 'formik';
 import Swal from "sweetalert2";
 import "./postUser.css";
 import {  Link, useNavigate } from "react-router-dom";
 
 
-// const validate = values => {
-//   const errors = {};
-//   if (!values.name) {
-//     errors.name = 'Required';
-//   }
-
-
-//   if (!values.email) {
-//     errors.email = 'Required';
-//   } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
-//     errors.email = 'Invalid email address';
-//   }
-
-  
-//   if (!values.phone) {
-//     errors.phone = 'Required';
-//   } 
-//   return errors;
-// };
 
 const PostUser = () => {
-  // const formik = useFormik({
-  //   initialValues: {
-  //     name: '',
-  //     email: '',
-  //     phone: '',
-      
-  //   },
-  //   validate,
-  //   onSubmit: () => {
-  //   },
-  // });
 
   const [formData, setFormData] = useState({
     name: "",
@@ -73,27 +42,6 @@ const PostUser = () => {
       icon: "success",
       title: "User added in successfully"
     });
-    // const validationErrors = {}
-
-    //  if(!formData.name.trim()){
-    //   validationErrors.name = "name is required"
-    //  }
-
-    //  if(!formData.email.trim()){
-    //   validationErrors.email = "email is required"
-    //  } else if(!/\S+@\S\.\S+/.test(formData.email)){
-    //   validationErrors.email ="email is not valid"
-    //  }
-
-    //  if(!formData.phone.trim()){
-    //   validationErrors.phone = "phone number is required"
-    //  }
-
-    //  setErrors(validationErrors)
-
-    //  if(Object.keys(validationErrors).length === 0) {
-    //   alert("Form Submittted Successfully")
-    //  }
 
        try {
         const response = await fetch("https://crud-node-2.onrender.com/api/user",{
@@ -114,10 +62,10 @@ const PostUser = () => {
   };
   return (
     <>
-      <div className="center-form col-sm-12">
-       
+     {/* <img src="gradient.png"/> */}
+      <div className="center-form col-sm-12 back-img">
         <Form onSubmit={handleSubmit}>
-        <h3 className="text-center">Post New User</h3>
+        <h3 className="text-center">Add Employee</h3>
           <Form.Group controlId="formBasicName">
             <Form.Label>Name</Form.Label>
             <input
@@ -129,7 +77,6 @@ const PostUser = () => {
               onChange={handleInputChange}
               required
             />
-       {/* {formik.errors.name ? <div>{formik.errors.name}</div> : null} */}
             
           </Form.Group>
 
@@ -144,7 +91,6 @@ const PostUser = () => {
               onChange={handleInputChange}
               required
             />
-       {/* {formik.errors.email ? <div>{formik.errors.email}</div> : null} */}
           </Form.Group>
 
           <Form.Group controlId="formBasicPhone">
@@ -158,7 +104,6 @@ const PostUser = () => {
               onChange={handleInputChange}
               required
             />
-       {/* {formik.errors.phone ? <div>{formik.errors.phone}</div> : null} */}
           </Form.Group>
 
           <Button varient="success" type="submit" className=" btn-success">
@@ -171,6 +116,7 @@ const PostUser = () => {
           </Button> </Link>
         </Form>
       </div>
+      
     </>
   );
 };

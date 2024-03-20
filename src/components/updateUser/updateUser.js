@@ -55,10 +55,10 @@ const UpdateUser = () => {
 
   return (
     <>
-    <div className="container">
-      <div className="center-form">
+ 
+      <div className="center-form back-img">
         <Form onSubmit={handleSubmit}>
-        <h3 className="text-center">Update User</h3>
+        <h3 className="text-center">Update Employee</h3>
 
           <Form.Group controlId="formBasicName">
             <Form.Label>Name</Form.Label>
@@ -103,7 +103,7 @@ const UpdateUser = () => {
           </Link>
         </Form>
       </div>{" "}
-      </div>
+      
     </>
   );
 };

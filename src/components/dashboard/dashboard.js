@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Col, Table, Row, Container, Button} from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
+import "./dashboard.css";
 import Swal from "sweetalert2";
 const Dashboard = () =>{
     const [users, setUsers] = useState([]);
@@ -65,10 +66,10 @@ const Dashboard = () =>{
 
     return(
         <>
-        <Container className="mt-5">
+        <Container className="mt-5 list-img">
             <Row>
                 <Col>
-                <h3 className="text-center">List of users</h3>
+                <h3 className="text-center">Employee List</h3>
 
                 <Table striped bordered hover responsive>
                     <thead>

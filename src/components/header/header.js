@@ -6,10 +6,10 @@ const Header = () => {
         <>
          <Navbar bg="dark" data-bs-theme="dark">
         <Container>
-          <Navbar.Brand as={Link} to="/">My App</Navbar.Brand>
+          <Navbar.Brand as={Link} to="/"><img src="/images/logo-link.jpg" className="logo-link"/></Navbar.Brand>
           <Nav className="ml-auto">
             <Nav.Link as={Link} to="/" className="nav-link">Dashboard</Nav.Link>
-            <Nav.Link  as={Link} to="/user" className="nav-link">Post User</Nav.Link>
+            <Nav.Link  as={Link} to="/user" className="nav-link">Add Employee</Nav.Link>
            
           </Nav>
         </Container>
